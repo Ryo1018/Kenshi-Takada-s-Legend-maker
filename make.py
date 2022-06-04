@@ -26,7 +26,7 @@ parsed_text = MeCab.Tagger('-Owakati').parse(text)
 parsed_text = re.sub(r'。', '。\n', parsed_text)
 # print(parsed_text)
 
-text_model = markovify.NewlineText(parsed_text, state_size=2, well_formed=False)
+text_model = markovify.NewlineText(parsed_text, state_size=3, well_formed=False)
 
 rnd = random.randint(1,3)
 
